@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdul21-dev/Backend.git"
+  },
+  "author": "Abdul Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdul21-dev/Backend/issues"
+  },
+  "homepage": "https://github.com/Abdul21-dev/Backend#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
