@@ -13,9 +13,27 @@ app.listen(port, ()=>{
 // });
 
 app.get("/", (req, res)=>{
-    res.send("You selected main route");
+    res.send("this is the main route");
+});
+
+// app.get("/search", (req, res)=>{
+//     res.send("this is  search route");
+// });
+// app.get("/info", (req, res)=>{
+//     res.send("You selected information route");
+// });
+
+app.get("/:username/:id", (req, res)=>{
+    let {username, id} = req.params;
+    let codeStr = `<h1>Welcome to the account of @${username}</h1>`;
+    res.send(codeStr);
 });
 
 app.get("/search", (req, res)=>{
-    res.send("You selected search route");
+    let {q} = req.query ;
+    if(!q){
+        res.send(`<h1>No query entered<h1>`);
+    }
+    console.log(`Query searched is : ${q}`);
+    res.send(`<h1>This is the search results for ${q}<h1>`);
 });
