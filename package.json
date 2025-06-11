@@ -17,6 +17,7 @@
   "homepage": "https://github.com/Abdul21-dev/Backend#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
 }
