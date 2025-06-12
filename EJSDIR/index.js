@@ -21,3 +21,9 @@ app.get("/diceroll", (req, res)=>{
     let DiceVal = Math.floor(Math.random()*6)+1;
     res.render("rolldice.ejs", {DiceVal});
 });
+
+app.get("/ig/:username", (req, res)=>{
+    const followers = ["RCB", "CSK", "MI", "SRH", "DC", "LSG", "GT", "PBKS", "RR","KKR"];
+    let {username} = req.params;
+    res.render("instagram.ejs", {username, followers});
+});

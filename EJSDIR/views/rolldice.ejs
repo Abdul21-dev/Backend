@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Dice value is :<%=  DiceVal %></h1>
-    
+    <% if(DiceVal == 6){%>
+    <h2>You Won. Roll again !!</h2>
+   <% } %> <% if(DiceVal !== 6){%>
+    <h2>Try again</h2>
+    <% } %>
 </body>
 </html>
