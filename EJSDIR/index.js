@@ -35,3 +35,14 @@ app.get("/ig/:username", (req, res)=>{
         res.render("error.ejs", {username});
     }
 });
+
+app.use(express.urlencoded({extended : true}));
+
+app.get("/register", (req, res)=>{
+    let {user, password} = req.query ;
+    res.send(`Standard GET request, Welcome ${user}`)
+});
+app.post("/register", (req, res)=>{
+    let {user, password} = req.body ;
+    res.send(`Standard POST request, Welcome ${user}`)
+});
